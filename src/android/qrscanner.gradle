@@ -3,10 +3,10 @@ repositories {
 }
 
 dependencies {
-    api 'com.journeyapps:zxing-android-embedded:3.5.0'
-    api 'com.android.support:appcompat-v7:23.1.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 }
 
 android {
-    buildToolsVersion '23.0.2' // Older versions may give compile errors
+    buildToolsVersion '27.0.3' // Older versions may give compile errors
 }
