@@ -10,7 +10,7 @@
       QRScanner.scan(
       function(err, result){
         if(err) {
-          console.log('scan error:', err);
+          console.log('scan error:', result);
         } else {
           window.alert('result: ' + result);
         }

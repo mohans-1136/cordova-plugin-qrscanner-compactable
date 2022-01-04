@@ -1,5 +1,6 @@
-const replace = require("replace");
-const now = Date.now();
+/*global require:false*/
+var replace = require("replace");
+var now = Date.now();
 console.log('Replacing the {{TIMESTAMP}} in config.xml...');
 replace({
     regex: "{{TIMESTAMP}}",

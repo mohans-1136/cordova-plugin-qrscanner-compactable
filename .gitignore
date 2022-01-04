@@ -20,4 +20,4 @@ node_modules/
 
 # generated files
 dist/
-*.min.js
+src/browser/plugin.min.js
