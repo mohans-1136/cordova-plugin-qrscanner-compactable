@@ -464,7 +464,6 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
                 formatList.add(BarcodeFormat.EAN_13);
                 formatList.add(BarcodeFormat.EAN_8);
                 formatList.add(BarcodeFormat.ITF);
-                formatList.add(BarcodeFormat.MAXICODE);
                 formatList.add(BarcodeFormat.PDF_417);
                 formatList.add(BarcodeFormat.QR_CODE);
                 formatList.add(BarcodeFormat.RSS_14);
