@@ -8,6 +8,7 @@
   <js-module src="www/www.min.js" name="QRScanner">
     <clobbers target="QRScanner" />
   </js-module>
+
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="QRScanner">
@@ -21,20 +22,15 @@
     </config-file>
 
 
-
     <edit-config file="app/src/main/AndroidManifest.xml" mode="overwrite" target="/manifest/uses-permission[@android:name='android.permission.CAMERA']">
         <uses-permission android:name="android.permission.CAMERA" />
     </edit-config>
  
 
-
     <source-file src="src/android/QRScanner.java" target-dir="src/com/bitpay/cordova/qrscanner"/>
     <framework src="src/android/qrscanner.gradle" custom="true" type="gradleReference"/>
-
-
-
-
   </platform>
+
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
       <feature name="QRScanner">
@@ -57,24 +53,5 @@
       <runs />
     </js-module>
   </platform>
-  <platform name="windows">
-    <config-file target="config.xml" parent="/*">
-      <feature name="QRScanner">
-        <param name="windows-package" value="QRScanner" />
-      </feature>
-    </config-file>
-    <config-file target="package.appxmanifest" parent="/Package/Capabilities">
-      <DeviceCapability Name="webcam" />
-    </config-file>
-    <js-module src="src/windows/lib/qrScanner.js" name="qrScanner">
-      <runs/>
-    </js-module>
-    <js-module src="src/windows/lib/preview.js" name="preview">
-      <runs/>
-    </js-module>
-    <framework src="src/windows/QRReader/QRReader.csproj" custom="true" type="projectReference"/>
-    <asset src="src/windows/lib/preview.css" target="css/plugin-qrscanner-preview.css" />
-    <hook src="hooks/windows/check-arch.js" type="before_compile" />
-    <hook src="hooks/windows/check-arch.js" type="before_run" />
-  </platform>
+
 </plugin>
